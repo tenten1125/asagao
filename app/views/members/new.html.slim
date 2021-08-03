@@ -1,2 +1,7 @@
-h1 Members#new
-p Find me in app/views/members/new.html.slim
+- @page_title = '会員の新規登録'
+
+h1= @page_title
+
+= form_with model: @member, local: true do |f|
+  = render 'form', f: f
+  = f.submit
