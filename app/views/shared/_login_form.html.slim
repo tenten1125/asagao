@@ -1,6 +1,9 @@
 h2 ログイン
 
-/= form_with model: @member, local: true do |f|
+- if flash.alert 
+  p.alert= flash.alert
+
+= form_with scope: :session, local: true do |f|
   .form-group
     = f.label :member
     = f.text_field
