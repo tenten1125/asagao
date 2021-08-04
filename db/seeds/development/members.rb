@@ -9,6 +9,8 @@ gnames = %w[taro jiro hanako]
     email: "#{names[idx]}@example.com",
     birthday: '1981-12-01',
     sex: [1, 1, 2][idx % 3],
-    admin: (idx == 0)
+    admin: (idx == 0),
+    password: 'asagao!',
+    password_confirmation: 'asagao!'
   )
 end
