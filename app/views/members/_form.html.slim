@@ -11,7 +11,7 @@ table.attr
     th= f.label :full_name
     td= f.text_field :full_name
   tr 
-    th= f.label :sex
+    th= Member.human_attribute_name(:sex)
     td 
       = f.radio_button :sex, 1
       = f.label :sex_1
@@ -24,7 +24,7 @@ table.attr
     th= f.label :email
     td= f.text_field :email
   tr 
-    th= f.label :admin
+    th= Member.human_attribute_name(:admin)
     td 
       = f.check_box :admin
       = f.label :admin 
