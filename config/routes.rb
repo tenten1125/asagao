@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     get 'search', on: :collection
   end
 
-  resource :session, only: %i[create destroy]
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
+  resource :account, only: %i[show edit update]
+  resource :password, only: %i[show edit update]
 end

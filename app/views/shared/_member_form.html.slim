@@ -23,8 +23,9 @@ table.attr
   tr 
     th= f.label :email
     td= f.text_field :email
-  tr 
-    th= Member.human_attribute_name(:admin)
-    td 
-      = f.check_box :admin
-      = f.label :admin 
+  - if controller.kind_of?(MembersController)
+    tr 
+      th= Member.human_attribute_name(:admin)
+      td 
+        = f.check_box :admin, disabled: !current_member.admin?
+        = f.label :admin 
