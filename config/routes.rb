@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
 
   resource :session, only: %i[create destroy]
+  resource :account, only: %i[show edit update]
+  resource :password, only: %i[show edit update]
 end
